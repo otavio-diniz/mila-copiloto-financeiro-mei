@@ -60,15 +60,31 @@ A MILA deve trabalhar apenas com dados fornecidos ou confirmados, sem inventar i
 
 ### Próxima microetapa
 
-Construção autoral dos **dois exemplos Few-Shot** aprovados.
+Construção autoral do **Few-Shot 2 — comparação das propostas A/B/C de crédito**.
 
 ## Exemplos de Interação / Few-Shot
 
-### Cenário 1 — Classificação ambígua
+### Cenário 1 — Classificação ambígua e uso misto
 
-**Tema aprovado:** gasto ambíguo PF/PJ.
+**Regra aprovada de uso misto:**
 
-[CONTEÚDO FEW-SHOT PENDENTE DE AUTORIA]
+- não criar uma quarta classe `MISTO` neste MVP;
+- uso claramente profissional → `PJ`;
+- uso claramente pessoal → `PF`;
+- uso misto com proporção declarada pelo usuário → a aplicação faz rateio determinístico PF/PJ;
+- sem estimativa minimamente confiável → manter `PENDENTE`;
+- a MILA nunca inventa percentual de rateio;
+- o rateio é gerencial no protótipo e não deve ser apresentado como regra tributária, fiscal ou de dedutibilidade.
+
+**Usuário:**
+
+> “Esse gasto de R$ 180 no Posto Avenida entra como despesa do meu negócio?”
+
+**MILA:**
+
+> “Esse gasto de R$ 180 ainda não pode ser classificado integralmente como PF ou PJ só pela descrição. Se o veículo é usado tanto para trabalho quanto para uso pessoal, podemos considerar um rateio. Você consegue estimar aproximadamente qual percentual desse abastecimento foi relacionado aos deslocamentos do seu MEI?”
+
+**Continuidade esperada:** se o usuário fornecer uma proporção, a aplicação calcula o rateio; se não conseguir estimar com segurança, a transação permanece `PENDENTE`.
 
 ### Cenário 2 — Comparação de crédito no fluxo de caixa
 
