@@ -102,7 +102,7 @@ Reserva operacional mínima aprovada: **R$ 3.500,00**.
 
 ## Estado de integração
 
-Os quatro arquivos sintéticos foram materializados em `develop` e conferidos por readback. Este documento permanece como **material de trabalho autoral**, não como declaração de submissão final.
+Os quatro arquivos sintéticos foram materializados, conferidos por readback e promovidos para `main` após aprovação autoral explícita. Este documento registra a base aprovada do Gate 2 e não representa submissão final do desafio.
 
 ## Estado do Gate 2
 
@@ -112,8 +112,9 @@ Os quatro arquivos sintéticos foram materializados em `develop` e conferidos po
 - transações e compromissos: **aprovados**;
 - regra PF/PJ/PENDENTE: **aprovada**;
 - propostas de crédito e reserva operacional: **aprovadas**;
-- arquivos sintéticos em `develop`: **materializados e conferidos**;
-- promoção para `main`: **pendente de revisão autoral**.
+- arquivos sintéticos: **materializados e conferidos**;
+- promoção para `main`: **concluída após aprovação autoral**;
+- merge commit do Gate 2: `fba1bc97d66982927e272c5435b6dc1ec4c8f716`.
 
 
 ## Complemento posterior — uso misto
