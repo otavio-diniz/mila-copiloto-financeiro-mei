@@ -114,3 +114,18 @@ Os quatro arquivos sintéticos foram materializados em `develop` e conferidos po
 - propostas de crédito e reserva operacional: **aprovadas**;
 - arquivos sintéticos em `develop`: **materializados e conferidos**;
 - promoção para `main`: **pendente de revisão autoral**.
+
+
+## Complemento posterior — uso misto
+
+Decisão autoral aprovada durante o Gate 3:
+
+- não criar classe `MISTO` no MVP;
+- uso claramente profissional → `PJ`;
+- uso claramente pessoal → `PF`;
+- uso misto com proporção declarada pelo usuário → rateio determinístico entre PF e PJ;
+- sem estimativa confiável → `PENDENTE`;
+- o sistema não inventa percentual;
+- o rateio é gerencial no protótipo e não representa regra tributária ou fiscal.
+
+Este complemento **não altera a conclusão do Gate 2**; ele refina o comportamento de tratamento dos casos ambíguos durante o Gate 3.
