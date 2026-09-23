@@ -31,11 +31,23 @@ A base será específica para MEI e utilizará somente dados fictícios.
 
 [PENDENTE — depende da aprovação do perfil fictício, transações e propostas.]
 
+## Perfil fictício aprovado
+
+**Carlos**, eletricista autônomo e MEI.
+
+| Parâmetro | Valor aprovado |
+|---|---|
+| Faturamento médio mensal | R$ 8.500,00 |
+| Saldo empresarial inicial | R$ 4.800,00 |
+| Retirada pessoal habitual | R$ 2.500,00/mês |
+| Recebimentos | Irregulares, com maior concentração na segunda metade do mês |
+| Despesas empresariais típicas | Materiais elétricos, combustível/deslocamento, telefone e ferramentas |
+| Dor central | Mistura gastos pessoais e empresariais e perde visibilidade do caixa real |
+| Aquisição simulada | Conjunto profissional de ferramentas/equipamentos de R$ 6.000,00 |
+
 ## Decisões ainda necessárias
 
-- definir o perfil fictício do eletricista;
 - definir movimentações e compromissos;
-- definir aquisição simulada;
 - definir duas ou três propostas fictícias de crédito;
 - validar as regras PF/PJ/PENDENTE.
 
@@ -43,4 +55,4 @@ A base será específica para MEI e utilizará somente dados fictícios.
 
 - cenário do MEI: **aprovado**;
 - arquivos-base: **aprovados**;
-- perfil e valores fictícios: **pendentes de aprovação autoral**.
+- perfil e valores fictícios: **aprovados**.
