@@ -1,0 +1,4 @@
+proposta_id,valor_financiado,numero_parcelas,valor_parcela,total_pago,custo_adicional,dia_primeiro_vencimento,caracteristica
+A,6000.00,6,1070.00,6420.00,420.00,5,"Menor custo total; vencimento antes dos principais recebimentos"
+B,6000.00,6,1110.00,6660.00,660.00,25,"Custo maior que A; vencimento melhor alinhado ao ciclo de recebimentos"
+C,6000.00,12,620.00,7440.00,1440.00,20,"Menor parcela mensal; maior custo total e maior prazo"
