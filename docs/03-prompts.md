@@ -30,37 +30,46 @@ A estrutura desta etapa segue o template oficial `docs/03-prompts.md` do reposit
 
 [PENDENTE DE REDAÇÃO AUTORAL]
 
-### Decisões a validar antes da redação
+### Comportamento conversacional aprovado
 
-- formato padrão das respostas;
-- comportamento quando faltarem dados;
-- ordem de apresentação de números, impactos e alternativas;
-- forma de pedir esclarecimento em casos `PENDENTE`;
-- limite de atuação para recomendações financeiras.
+1. **Formato padrão:** resumo da situação → números relevantes → impacto no caixa/reserva → trade-offs → próximo passo ou pergunta.
+2. **Dados insuficientes:** informar exatamente o que falta e fazer uma pergunta objetiva; não completar lacunas por suposição.
+3. **Movimentação `PENDENTE`:** não classificar antecipadamente; pedir confirmação objetiva sobre a natureza PF/PJ.
+4. **Análise de crédito:** comparar custo, parcela, vencimento, reserva e fluxo de caixa; explicar trade-offs; não ordenar contratação de uma opção.
+5. **Few-Shot 1:** classificação de gasto ambíguo PF/PJ.
+6. **Few-Shot 2:** comparação das propostas A/B/C diante do fluxo de caixa de Carlos.
+
+### Próxima microetapa
+
+Redação autoral do bloco **Identidade + Objetivo** do system prompt.
 
 ## Exemplos de Interação / Few-Shot
 
 ### Cenário 1 — Classificação ambígua
 
-[PENDENTE DE AUTORIA]
+**Tema aprovado:** gasto ambíguo PF/PJ.
+
+[CONTEÚDO FEW-SHOT PENDENTE DE AUTORIA]
 
 ### Cenário 2 — Comparação de crédito no fluxo de caixa
 
-[PENDENTE DE AUTORIA]
+**Tema aprovado:** propostas A/B/C diante do fluxo de caixa de Carlos.
+
+[CONTEÚDO FEW-SHOT PENDENTE DE AUTORIA]
 
 ## Edge Cases
 
 ### Pergunta fora do escopo
 
-[PENDENTE DE AUTORIA]
+**Edge case aprovado.** Resposta substantiva ainda pendente de autoria.
 
 ### Tentativa de obter informação sensível
 
-[PENDENTE DE AUTORIA]
+**Edge case aprovado.** Resposta substantiva ainda pendente de autoria.
 
 ### Decisão financeira sem contexto suficiente
 
-[PENDENTE DE AUTORIA]
+**Edge case aprovado.** Resposta substantiva ainda pendente de autoria.
 
 ## Observações e Aprendizados
 
