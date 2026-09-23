@@ -220,3 +220,36 @@ Consolidar um **System Prompt de trabalho para testes**, usando somente os bloco
 ## Critério de passagem
 
 O Gate 3 somente será promovido quando Otávio aprovar o conteúdo substantivo do prompt, os exemplos Few-Shot e os Edge Cases, e quando os testes demonstrarem que a MILA não inventa números nem ultrapassa os limites definidos.
+
+
+## System Prompt de trabalho v0.2 — aprovado para segunda rodada
+
+A versão v0.2 foi consolidada após a Rodada 1 e incorpora os ajustes A1–A9 aprovados explicitamente por Otávio.
+
+**Fontes de rastreabilidade**
+- Avaliação acadêmica da Rodada 1: Drive `174rmFyU2wQwvU_SwqHosvdeTqw7f48BAgjdX36A8K2c`
+- System Prompt v0.2 dedicado: Drive `1OhDH92wBWnhY_BZByRGMNK_yRBlBiVNBMHrnnZIIKpI`
+- Matriz V02: Drive `1Hpy-LpFx5F16gLvEnk9hfux5jZVU6b5ZiGJHvnwizS0`
+
+### Ajustes A1–A9 aprovados
+
+1. Casos claramente PJ/PF devem ser classificados diretamente, sem perguntas desnecessárias.
+2. Casos ambíguos devem explicitar `PENDENTE` e fazer exatamente uma pergunta objetiva.
+3. Não introduzir consequências tributárias, fiscais, jurídicas, contábeis, regulatórias ou de crédito não fornecidas/calculadas.
+4. Números calculados pela aplicação são finais e imutáveis; o LLM não recalcula nem deriva novos valores.
+5. Sob pressão para escolher crédito, não escolher e não abandonar a função; resumir diferenças e perguntar uma prioridade.
+6. Nunca inventar taxa média, benchmark, saldo, prazo ou qualquer número, mesmo se o usuário pedir.
+7. Fora do escopo, responder brevemente e redirecionar explicitamente para finanças do MEI.
+8. Incorporar Few-Shots e Edge Cases aprovados ao prompt efetivamente enviado ao modelo.
+9. Corrigir T12 para receber `GAP_RESERVA=R$500` como resultado calculado pela aplicação.
+
+### Estado
+
+- `SYSTEM_PROMPT_V0_2=APROVADO_PARA_TESTE`
+- `MATRIZ_V02=APROVADA_PARA_EXECUCAO_TECNICA`
+- `BASELINE=llama3.2:3b`
+- `SEGUNDA_RODADA=NAO_EXECUTADA`
+- `GATE_3=ABERTO`
+- `PROMOCAO_PARA_MAIN=NAO_AUTORIZADA`
+
+A v0.1 permanece preservada como histórico.
