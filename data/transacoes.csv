@@ -1,0 +1,15 @@
+data,descricao,valor,tipo_movimento,classe_esperada,observacao
+2026-10-02,Serviço elétrico — Cliente A,1400.00,entrada,PJ,Receita do negócio
+2026-10-03,Loja de materiais elétricos,-460.00,saida,PJ,Insumo profissional
+2026-10-05,Supermercado,-320.00,saida,PF,Despesa pessoal
+2026-10-07,Serviço elétrico — Cliente B,1100.00,entrada,PJ,Receita do negócio
+2026-10-08,Posto Avenida,-180.00,saida,PENDENTE,Pode ser deslocamento profissional ou pessoal
+2026-10-10,Conta de telefone,-120.00,saida,PENDENTE,Pode ser linha profissional ou pessoal
+2026-10-14,Serviço comercial — Cliente C,2000.00,entrada,PJ,Receita do negócio
+2026-10-16,Transferência para Carlos,-1250.00,saida,PF,Retirada pessoal
+2026-10-20,Serviço residencial — Cliente D,1650.00,entrada,PJ,Receita do negócio
+2026-10-22,Ferramentas elétricas,-540.00,saida,PJ,Equipamento profissional
+2026-10-25,Farmácia,-165.00,saida,PF,Despesa pessoal
+2026-10-27,Serviço comercial — Cliente E,2350.00,entrada,PJ,Receita do negócio
+2026-10-28,Transferência para Carlos,-1250.00,saida,PF,Completa retirada mensal de R$ 2.500
+2026-10-29,Compra Mercado Central,-275.00,saida,PENDENTE,Descrição insuficiente para classificar com segurança
