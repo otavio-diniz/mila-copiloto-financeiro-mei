@@ -1,0 +1,7 @@
+data_prevista,descricao,valor,tipo_movimento,classe_esperada,observacao
+2026-11-05,DAS MEI,-80.00,saida,PJ,Obrigação do negócio
+2026-11-08,Compra prevista de materiais,-650.00,saida,PJ,Despesa operacional prevista
+2026-11-12,Cliente F — serviço agendado,1300.00,entrada,PJ,Recebimento previsto
+2026-11-15,Telefone/internet,-120.00,saida,PENDENTE,Validar proporção de uso profissional e pessoal
+2026-11-22,Cliente G — serviço comercial,2100.00,entrada,PJ,Recebimento previsto
+2026-11-28,Retirada pessoal planejada,-2500.00,saida,PF,Retirada pessoal habitual
