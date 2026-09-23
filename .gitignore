@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Segredos e configuração local
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets.*
+credentials.*
+config.local.*
+
+# Dados reais/locais — o projeto deve versionar apenas dados fictícios explicitamente aprovados
+data/private/
+data/raw_real/
+*.sqlite
+*.db
+
+# Artefatos de execução
+logs/
+tmp/
+temp/
+outputs/
+*.log
+
+# Notebooks
+.ipynb_checkpoints/
