@@ -8,7 +8,7 @@
 
 ## Dados utilizados
 
-Proposta em avaliação autoral:
+Conjunto inicial **aprovado por Otávio**:
 
 | Arquivo | Formato | Finalidade |
 |---|---|---|
@@ -16,7 +16,8 @@ Proposta em avaliação autoral:
 | `transacoes.csv` | CSV | Entradas, saídas e classificação PF/PJ/PENDENTE |
 | `compromissos.csv` | CSV | Receitas previstas, despesas e vencimentos |
 | `propostas_credito.csv` | CSV | Cenários fictícios de crédito |
-| `historico_interacoes.csv` | CSV | Contexto conversacional, se necessário |
+
+`historico_interacoes.csv` ficou fora do escopo inicial.
 
 ## Adaptações
 
@@ -32,9 +33,14 @@ A base será específica para MEI e utilizará somente dados fictícios.
 
 ## Decisões ainda necessárias
 
-- aprovar o conjunto final de arquivos;
 - definir o perfil fictício do eletricista;
 - definir movimentações e compromissos;
 - definir aquisição simulada;
 - definir duas ou três propostas fictícias de crédito;
 - validar as regras PF/PJ/PENDENTE.
+
+## Estado do Gate 2
+
+- cenário do MEI: **aprovado**;
+- arquivos-base: **aprovados**;
+- perfil e valores fictícios: **pendentes de aprovação autoral**.
