@@ -6,11 +6,24 @@ Projeto em desenvolvimento no **Bootcamp Bradesco — GenAI, Dados & Cyber**, M�
 
 ## Estado do projeto
 
-- **Gate 1 — Documentação do agente:** concluído por aprovação autoral.
-- **Gate 2 — Base de conhecimento:** em desenvolvimento autoral.
-- **Cenário do MVP:** MEI eletricista autônomo.
-- **Aplicação funcional:** ainda não implementada.
+- **Gate 1 — Documentação do agente:** concluído por aprovação autoral; completude documental reconciliada.
+- **Gate 2 — Base de conhecimento:** concluído com evidência, aprovação autoral e merge em `main`.
+- **Gate 3 — Prompts do agente:** em desenvolvimento autoral; blocos substantivos aprovados e em consolidação para testes.
+- **Gate 4 — Aplicação funcional:** ainda não iniciada; stack técnica não fixada.
 - **Submissão:** não realizada.
+
+## Onde cada parte é construída
+
+```text
+data/      base fictícia usada pelo protótipo
+docs/      documentação acadêmica e decisões por etapa
+src/       aplicação executável — será construída no Gate 4
+tests/     testes de comportamento, segurança e métricas
+assets/    diagramas, imagens e evidências visuais
+.github/   fluxo de colaboração/revisão
+```
+
+Hoje a MILA existe como **especificação autoral + base sintética versionada**. O agente executável ainda não foi implementado.
 
 ## Problema
 
@@ -18,7 +31,7 @@ O projeto investiga como apoiar um MEI que mistura finanças pessoais e empresar
 
 ## Direção funcional
 
-A MILA deverá, progressivamente:
+A MILA deverá:
 
 1. separar movimentações PF, PJ e pendentes de confirmação;
 2. reconstruir uma visão simples do caixa empresarial;
@@ -27,25 +40,36 @@ A MILA deverá, progressivamente:
 5. comparar cenários de crédito considerando custo, prazo, parcela, vencimento e compatibilidade com o fluxo de caixa;
 6. explicar resultados em linguagem simples.
 
-## Princípios de segurança
-
-- dados do protótipo serão fictícios/mockados;
-- cálculos determinísticos não devem ser inventados pelo LLM;
-- informação ausente deve gerar pedido de esclarecimento;
-- o agente não movimenta dinheiro nem contrata crédito;
-- não há promessa de melhor oferta do mercado;
-- o protótipo não substitui aconselhamento contábil, jurídico ou financeiro regulado.
-
-## Estrutura
+## Arquitetura conceitual
 
 ```text
-data/      dados fictícios e documentação da base
-docs/      artefatos acadêmicos por etapa do desafio
-src/       implementação do protótipo
-tests/     casos de teste e métricas
-assets/    diagramas, imagens e evidências visuais
-.github/   templates de colaboração e controle do fluxo
+Usuário
+  ↓
+Interface
+  ↓
+Camada determinística de regras/cálculos ←→ data/
+  ↓
+Contexto calculado + System Prompt
+  ↓
+LLM
+  ↓
+Guardrails
+  ↓
+Resposta simples ao usuário
 ```
+
+A tecnologia da interface e o modelo de linguagem serão definidos no **Gate 4**.
+
+## Princípios de segurança
+
+- dados do protótipo são fictícios/mockados;
+- cálculos determinísticos não são inventados pelo LLM;
+- informação ausente gera pedido de esclarecimento;
+- ambiguidades permanecem `PENDENTE` até confirmação;
+- o agente não movimenta dinheiro nem contrata crédito;
+- não há promessa de melhor oferta do mercado;
+- o protótipo não substitui orientação contábil, jurídica ou financeira profissional/regulada;
+- senha, token e credenciais bancárias não são solicitados.
 
 ## Integridade acadêmica
 
@@ -54,7 +78,7 @@ Este repositório é um **workspace de desenvolvimento autoral**. Decisões subs
 ## Referências de origem
 
 - Repositório oficial do desafio: `digitalinnovationone/dio-lab-bia-do-futuro`
-- Exemplo do instrutor: usado somente como referência didática/comparativa, sem cópia como solução do projeto.
+- Exemplo do instrutor: referência didática/comparativa, sem cópia como solução do projeto.
 
 ---
 **MILA** — MEI Inteligente para Liquidez e Autonomia.
