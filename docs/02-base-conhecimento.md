@@ -1,51 +1,96 @@
 # Etapa 2 — Base de Conhecimento
 
-> **Estado:** em desenvolvimento autoral.
+> **Estado:** Gate 2 concluído com evidência e aprovação autoral.  
+> **Natureza:** material de trabalho acadêmico; não representa submissão final.  
+> **Backfill documental:** 23/09/2026 — Estratégia de Integração e Exemplo de Contexto foram consolidados tardiamente a partir de decisões já aprovadas e registrados sem reescrever a cronologia.
 
-## Cenário aprovado
+## Dados Utilizados
 
-**MEI eletricista autônomo.**
-
-## Dados utilizados
-
-Conjunto inicial **aprovado por Otávio**:
-
-| Arquivo | Formato | Finalidade |
+| Arquivo | Formato | Utilização no Agente |
 |---|---|---|
-| `perfil_mei.json` | JSON | Contexto do negócio |
-| `transacoes.csv` | CSV | Entradas, saídas e classificação PF/PJ/PENDENTE |
-| `compromissos.csv` | CSV | Receitas previstas, despesas e vencimentos |
-| `propostas_credito.csv` | CSV | Cenários fictícios de crédito |
+| `perfil_mei.json` | JSON | Contextualizar o MEI, saldo, retirada, reserva e aquisição simulada |
+| `transacoes.csv` | CSV | Registrar entradas, saídas e classificação PF/PJ/PENDENTE |
+| `compromissos.csv` | CSV | Projetar recebimentos, despesas e vencimentos |
+| `propostas_credito.csv` | CSV | Comparar cenários fictícios de crédito |
 
 `historico_interacoes.csv` ficou fora do escopo inicial.
 
-## Adaptações
+## Adaptações nos Dados
 
-A base será específica para MEI e utilizará somente dados fictícios.
+A base foi adaptada para um cenário de microempreendedor individual. Todos os dados são **MATERIAL DIDÁTICO FICTÍCIO/SINTÉTICO**. Não são usados CPF/CNPJ reais, credenciais bancárias ou dados financeiros reais.
 
-## Estratégia de integração
+### Perfil fictício aprovado
 
-[PENDENTE DE DECISÃO/IMPLEMENTAÇÃO]
+- Nome: **Carlos**
+- Atividade: **eletricista autônomo / MEI**
+- Faturamento médio mensal: **R$ 8.500**
+- Saldo empresarial inicial: **R$ 4.800**
+- Retirada pessoal habitual: **R$ 2.500/mês**
+- Reserva operacional mínima: **R$ 3.500**
+- Recebimentos: irregulares, concentrados principalmente na segunda metade do mês
+- Aquisição simulada: conjunto profissional de ferramentas/equipamentos de **R$ 6.000**
 
-## Exemplo de contexto
+### Classificação
 
-[PENDENTE — depende da aprovação do perfil fictício, transações e propostas.]
+- `PJ`: movimentação claramente ligada ao negócio;
+- `PF`: movimentação claramente pessoal;
+- `PENDENTE`: contexto insuficiente ou ambíguo; a MILA pede confirmação.
 
-## Perfil fictício aprovado
+A classificação não deve ser forçada quando a descrição não for suficiente.
 
-**Carlos**, eletricista autônomo e MEI.
+## Estratégia de Integração
 
-| Parâmetro | Valor aprovado |
-|---|---|
-| Faturamento médio mensal | R$ 8.500,00 |
-| Saldo empresarial inicial | R$ 4.800,00 |
-| Retirada pessoal habitual | R$ 2.500,00/mês |
-| Recebimentos | Irregulares, com maior concentração na segunda metade do mês |
-| Despesas empresariais típicas | Materiais elétricos, combustível/deslocamento, telefone e ferramentas |
-| Dor central | Mistura gastos pessoais e empresariais e perde visibilidade do caixa real |
-| Aquisição simulada | Conjunto profissional de ferramentas/equipamentos de R$ 6.000,00 |
+### Como os dados são carregados?
 
-## Transações aprovadas
+A aplicação deverá carregar os quatro arquivos JSON/CSV da pasta `data/`. A tecnologia de implementação será decidida no Gate 4.
+
+A camada de regras e cálculos usa esses arquivos para montar saldo, projeções, compromissos, parcelas e demais resultados numéricos. Esses cálculos são **determinísticos** e ficam fora do LLM.
+
+### Como os dados são usados no prompt?
+
+O **System Prompt** contém identidade, escopo, linguagem e guardrails. Os dados do MEI não ficam fixados nele.
+
+A cada análise, a aplicação monta um **contexto dinâmico** apenas com os dados e resultados necessários para aquela pergunta. O LLM recebe esse contexto para explicar os resultados em linguagem simples, mas não pode alterar valores calculados nem inventar dados ausentes.
+
+Quando faltar informação indispensável, a resposta deve pedir uma informação objetiva por vez.
+
+## Exemplo de Contexto Montado
+
+```text
+MATERIAL DIDÁTICO FICTÍCIO/SINTÉTICO
+
+MEI:
+- Nome: Carlos
+- Atividade: eletricista autônomo / MEI
+- Saldo empresarial inicial: R$ 4.800
+- Reserva operacional mínima: R$ 3.500
+- Retirada pessoal habitual: R$ 2.500/mês
+
+Aquisição em simulação:
+- Ferramentas/equipamentos: R$ 6.000
+
+Compromissos e recebimentos relevantes:
+- 05/11: DAS MEI - R$ 80
+- 08/11: materiais - R$ 650
+- 12/11: Cliente F + R$ 1.300
+- 22/11: Cliente G + R$ 2.100
+- 28/11: retirada pessoal - R$ 2.500
+
+Propostas de crédito:
+- A: 6 x R$ 1.070 | total R$ 6.420 | vencimento dia 05
+- B: 6 x R$ 1.110 | total R$ 6.660 | vencimento dia 25
+- C: 12 x R$ 620 | total R$ 7.440 | vencimento dia 20
+
+Itens ambíguos:
+- despesas classificadas como PENDENTE devem ser confirmadas antes de uma classificação PF/PJ definitiva.
+
+Objetivo da resposta:
+- explicar o efeito de cada cenário sobre o caixa e a reserva;
+- mostrar os trade-offs em linguagem simples;
+- não escolher a proposta pelo usuário.
+```
+
+## Transações Aprovadas
 
 | Data | Descrição | Valor | Classe esperada |
 |---|---|---:|---|
@@ -62,11 +107,11 @@ A base será específica para MEI e utilizará somente dados fictícios.
 | 25/10 | Farmácia | -R$ 165 | PF |
 | 27/10 | Serviço comercial — Cliente E | +R$ 2.350 | PJ |
 | 28/10 | Transferência para Carlos | -R$ 1.250 | PF |
-| 29/10 | Compra “Mercado Central” | -R$ 275 | PENDENTE |
+| 29/10 | Compra Mercado Central | -R$ 275 | PENDENTE |
 
-Receitas do período: **R$ 8.500,00**.
+Receitas do período: **R$ 8.500**.
 
-## Compromissos aprovados
+## Compromissos Aprovados
 
 | Data prevista | Compromisso | Valor | Classe |
 |---|---|---:|---|
@@ -77,11 +122,7 @@ Receitas do período: **R$ 8.500,00**.
 | 22/11 | Cliente G — serviço comercial | +R$ 2.100 | PJ |
 | 28/11 | Retirada pessoal planejada | -R$ 2.500 | PF |
 
-## Regra de classificação aprovada
-
-Quando a descrição ou o contexto forem insuficientes, a MILA não deve inferir PF/PJ com falsa certeza. A classificação deve permanecer `PENDENTE` e o agente deve pedir confirmação.
-
-## Propostas de crédito aprovadas
+## Propostas de Crédito Aprovadas
 
 | Proposta | Valor | Parcelamento | Total pago | Custo adicional | 1º vencimento | Característica |
 |---|---:|---:|---:|---:|---|---|
@@ -89,32 +130,25 @@ Quando a descrição ou o contexto forem insuficientes, a MILA não deve inferir
 | B | R$ 6.000 | 6 × R$ 1.110 | R$ 6.660 | R$ 660 | dia 25 | Melhor alinhamento com os principais recebimentos |
 | C | R$ 6.000 | 12 × R$ 620 | R$ 7.440 | R$ 1.440 | dia 20 | Menor parcela; maior custo total e prazo |
 
-Reserva operacional mínima aprovada: **R$ 3.500,00**.
+## Validação da Base Sintética
 
-## Validação da base sintética
+- receitas de outubro: **R$ 8.500**;
+- compromissos previstos de novembro antes do crédito: efeito líquido de **+R$ 50**;
+- A: 6 × R$ 1.070 = **R$ 6.420**;
+- B: 6 × R$ 1.110 = **R$ 6.660**;
+- C: 12 × R$ 620 = **R$ 7.440**.
 
-- receitas de outubro: **R$ 8.500,00**;
-- compromissos previstos de novembro, antes do crédito: efeito líquido de **+R$ 50,00**;
-- proposta A: 6 × R$ 1.070 = **R$ 6.420**;
-- proposta B: 6 × R$ 1.110 = **R$ 6.660**;
-- proposta C: 12 × R$ 620 = **R$ 7.440**;
-- custo adicional = total pago − R$ 6.000 em todas as propostas.
-
-## Estado de integração
-
-Os quatro arquivos sintéticos foram materializados, conferidos por readback e promovidos para `main` após aprovação autoral explícita. Este documento registra a base aprovada do Gate 2 e não representa submissão final do desafio.
+Os quatro arquivos foram materializados, lidos de volta e promovidos para `main` após aprovação explícita de Otávio.
 
 ## Estado do Gate 2
 
-- cenário do MEI: **aprovado**;
-- arquivos-base: **aprovados**;
-- perfil e valores fictícios: **aprovados**;
-- transações e compromissos: **aprovados**;
-- regra PF/PJ/PENDENTE: **aprovada**;
-- propostas de crédito e reserva operacional: **aprovadas**;
-- arquivos sintéticos: **materializados e conferidos**;
-- promoção para `main`: **concluída após aprovação autoral**;
-- merge commit do Gate 2: `fba1bc97d66982927e272c5435b6dc1ec4c8f716`.
+- aprovação autoral: **confirmada**;
+- PR de integração: **#2**;
+- merge commit: `fba1bc97d66982927e272c5435b6dc1ec4c8f716`;
+- submissão final: **não realizada**;
+- backfill documental de completude: **registrado em 23/09/2026**.
+
+`GATE_2=CONCLUIDO_COM_EVIDENCIA_E_BACKFILL_DOCUMENTAL`
 
 
 ## Complemento posterior — uso misto
