@@ -2,13 +2,12 @@
 
 Área reservada à base de conhecimento fictícia da MILA.
 
-## Previsto para o Gate 2
+## Arquivos aprovados para o Gate 2
 
 - `perfil_mei.json`
 - `transacoes.csv`
 - `compromissos.csv`
 - `propostas_credito.csv`
-- `historico_interacoes.csv` (opcional, conforme decisão autoral)
 
 ## Regras
 
