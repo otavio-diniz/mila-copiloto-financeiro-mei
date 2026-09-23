@@ -81,9 +81,28 @@ Receitas do período: **R$ 8.500,00**.
 
 Quando a descrição ou o contexto forem insuficientes, a MILA não deve inferir PF/PJ com falsa certeza. A classificação deve permanecer `PENDENTE` e o agente deve pedir confirmação.
 
-## Decisões ainda necessárias
+## Propostas de crédito aprovadas
 
-- definir duas ou três propostas fictícias de crédito.
+| Proposta | Valor | Parcelamento | Total pago | Custo adicional | 1º vencimento | Característica |
+|---|---:|---:|---:|---:|---|---|
+| A | R$ 6.000 | 6 × R$ 1.070 | R$ 6.420 | R$ 420 | dia 05 | Menor custo total; maior pressão no início do mês |
+| B | R$ 6.000 | 6 × R$ 1.110 | R$ 6.660 | R$ 660 | dia 25 | Melhor alinhamento com os principais recebimentos |
+| C | R$ 6.000 | 12 × R$ 620 | R$ 7.440 | R$ 1.440 | dia 20 | Menor parcela; maior custo total e prazo |
+
+Reserva operacional mínima aprovada: **R$ 3.500,00**.
+
+## Validação da base sintética
+
+- receitas de outubro: **R$ 8.500,00**;
+- compromissos previstos de novembro, antes do crédito: efeito líquido de **+R$ 50,00**;
+- proposta A: 6 × R$ 1.070 = **R$ 6.420**;
+- proposta B: 6 × R$ 1.110 = **R$ 6.660**;
+- proposta C: 12 × R$ 620 = **R$ 7.440**;
+- custo adicional = total pago − R$ 6.000 em todas as propostas.
+
+## Estado de integração
+
+Os quatro arquivos sintéticos foram materializados em `develop` e conferidos por readback. Este documento permanece como **material de trabalho autoral**, não como declaração de submissão final.
 
 ## Estado do Gate 2
 
@@ -91,4 +110,7 @@ Quando a descrição ou o contexto forem insuficientes, a MILA não deve inferir
 - arquivos-base: **aprovados**;
 - perfil e valores fictícios: **aprovados**;
 - transações e compromissos: **aprovados**;
-- regra PF/PJ/PENDENTE: **aprovada**.
+- regra PF/PJ/PENDENTE: **aprovada**;
+- propostas de crédito e reserva operacional: **aprovadas**;
+- arquivos sintéticos em `develop`: **materializados e conferidos**;
+- promoção para `main`: **pendente de revisão autoral**.
