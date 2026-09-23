@@ -1,0 +1,23 @@
+{
+  "classificacao": "MATERIAL DIDATICO FICTICIO/SINTETICO",
+  "nome_ficticio": "Carlos",
+  "atividade": "Eletricista autonomo",
+  "regime": "MEI",
+  "faturamento_medio_mensal": 8500,
+  "saldo_empresarial_inicial": 4800,
+  "retirada_pessoal_habitual_mensal": 2500,
+  "reserva_operacional_minima": 3500,
+  "padrao_recebimentos": "Irregulares, com maior concentracao na segunda metade do mes",
+  "despesas_empresariais_tipicas": [
+    "Materiais eletricos",
+    "Combustivel/deslocamento",
+    "Telefone",
+    "Ferramentas"
+  ],
+  "dor_central": "Mistura gastos pessoais e empresariais e perde visibilidade do caixa real",
+  "aquisicao_simulada": {
+    "descricao": "Conjunto profissional de ferramentas/equipamentos",
+    "valor": 6000
+  },
+  "observacao": "Todos os dados deste arquivo sao ficticios e foram aprovados para o prototipo academico MILA."
+}
