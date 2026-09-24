@@ -665,3 +665,35 @@ Modelo:
 - `QUARTA_RODADA=NAO_EXECUTADA`
 - `GATE_3=ABERTO`
 - `PROMOCAO_MAIN=NAO_AUTORIZADA`
+
+
+## System Prompt de trabalho v0.5 modular — aprovado para Rodada 5
+
+A versão v0.5 abandona a expansão monolítica e usa arquitetura **BASE + um único MODO_ATIVO por chamada** para reduzir interferência cruzada observada na Rodada 4.
+
+**Rastreabilidade**
+- Avaliação acadêmica da Rodada 4: Drive `1b3a7ATNZNVe9TotGJRMWkZLv9_wi_NBa3MfqeX7LAKo`
+- Evidência técnica da Rodada 4: Drive `1RhdrToddz9NAxE58rVW879momNaJUjUx`
+- System Prompt V0.5 modular: Drive `1opYzFq-nCaTyP7u4tDGYfJJfYYDGHuRPDQuLpR2gxJI`
+- Matriz V05 modular: Drive `1BSq3ax0zGrl203hPMWth-6v35I3eMXPgo2DsFp-9ZMI`
+
+### Contrato modular
+
+Cada chamada deve conter somente:
+1. BASE_PROMPT;
+2. MODO_ATIVO;
+3. MODE_PROMPT correspondente;
+4. contexto aplicável;
+5. mensagem do usuário.
+
+Modos: `CLASSIFICACAO`, `RATEIO`, `CREDITO`, `SEGURANCA`, `FORA_ESCOPO`, `EXPLICACAO_CAIXA`.
+
+O documento completo **não deve ser enviado inteiro ao LLM**. A seleção do modo é externa/determinística. O Gate 3 valida os módulos isoladamente; a implementação do roteador pertence ao Gate 4.
+
+### Estado
+
+- `SYSTEM_PROMPT_V0_5=APROVADO_PARA_TESTE`
+- `MATRIZ_V05=APROVADA_PARA_TESTE`
+- `RODADA_5=PREPARADA_NAO_EXECUTADA`
+- `GATE_3=ABERTO`
+- `PROMOCAO_MAIN=NAO_AUTORIZADA`
