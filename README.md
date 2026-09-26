@@ -6,24 +6,27 @@ Projeto em desenvolvimento no **Bootcamp Bradesco — GenAI, Dados & Cyber**, M�
 
 ## Estado do projeto
 
-- **Gate 1 — Documentação do agente:** concluído por aprovação autoral; completude documental reconciliada.
-- **Gate 2 — Base de conhecimento:** concluído com evidência, aprovação autoral e merge em `main`.
-- **Gate 3 — Prompts do agente:** em desenvolvimento autoral; blocos substantivos aprovados e em consolidação para testes.
-- **Gate 4 — Aplicação funcional:** ainda não iniciada; stack técnica não fixada.
-- **Submissão:** não realizada.
+- **Gate 1 — Documentação do agente:** PASS.
+- **Gate 2 — Base de conhecimento:** PASS.
+- **Gate 3 — Prompts/contratos comportamentais:** PASS, 12 comportamentos reconciliados.
+- **Gate 4 — Aplicação funcional:** PASS interno; protótipo localhost executável conectado à base sintética.
+- **Gate 5 — Avaliação e métricas:** PASS interno; 60 testes unitários + matriz live 12/12.
+- **Gate 6 — Pitch/demo:** PASS interno; roteiro de até 3 minutos + demo reproduzível 4/4.
+- **Git regularização/publicação:** pendente de gate específico; working tree não versionado nesta execução.
+- **Submissão DIO:** não realizada.
 
 ## Onde cada parte é construída
 
 ```text
 data/      base fictícia usada pelo protótipo
 docs/      documentação acadêmica e decisões por etapa
-src/       aplicação executável — será construída no Gate 4
-tests/     testes de comportamento, segurança e métricas
-assets/    diagramas, imagens e evidências visuais
+src/       aplicação executável e integração local
+tests/     testes unitários, matrizes live e demo harness
+assets/    evidências serializadas da validação
 .github/   fluxo de colaboração/revisão
 ```
 
-Hoje a MILA existe como **especificação autoral + base sintética versionada**. O agente executável ainda não foi implementado.
+Hoje a MILA existe como **protótipo funcional local + base sintética + testes e evidências reproduzíveis**.
 
 ## Problema
 
@@ -31,7 +34,7 @@ O projeto investiga como apoiar um MEI que mistura finanças pessoais e empresar
 
 ## Direção funcional
 
-A MILA deverá:
+A MILA implementa:
 
 1. separar movimentações PF, PJ e pendentes de confirmação;
 2. reconstruir uma visão simples do caixa empresarial;
@@ -58,7 +61,7 @@ Guardrails
 Resposta simples ao usuário
 ```
 
-A tecnologia da interface e o modelo de linguagem serão definidos no **Gate 4**.
+Implementação vigente: **Python 3.12 + biblioteca padrão + HTML/CSS server-rendered + `urllib.request` + Ollama local `llama3.2:3b`**, com execução em browser localhost.
 
 ## Princípios de segurança
 
@@ -71,9 +74,9 @@ A tecnologia da interface e o modelo de linguagem serão definidos no **Gate 4**
 - o protótipo não substitui orientação contábil, jurídica ou financeira profissional/regulada;
 - senha, token e credenciais bancárias não são solicitados.
 
-## Integridade acadêmica
+## Integridade e autoridade vigente
 
-Este repositório é um **workspace de desenvolvimento autoral**. Decisões substantivas, implementação e submissão pertencem a Otávio. Materiais de referência ou exemplos de terceiros não devem ser apresentados como produção autoral.
+Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático formativo sem nota** e autorizou assistência técnica direta para conclusão interna da MILA. A autorização cobre implementação, correção e testes no working tree, mas **não** cobre Git write, publicação, submissão DIO ou comunicação externa. O histórico anterior permanece preservado nas fontes acadêmicas.
 
 ## Referências de origem
 

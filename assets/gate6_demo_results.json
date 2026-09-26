@@ -1,0 +1,30 @@
+{
+  "steps_executed": 4,
+  "steps_pass": 4,
+  "steps_fail": 0,
+  "results": [
+    {
+      "step": "D01_DASHBOARD",
+      "status": 200,
+      "pass": true
+    },
+    {
+      "step": "D02_COMPARACAO",
+      "status": 200,
+      "output": "A: 6x R$1.070; total R$6.420; vencimento dia 05; reserva ABAIXO_DA_RESERVA.\nB: 6x R$1.110; total R$6.660; vencimento dia 25; reserva RESERVA_PRESERVADA.\nC: 12x R$620; total R$7.440; vencimento dia 20; reserva RESERVA_PRESERVADA.\nO que é mais importante para você: menor custo total, menor parcela, vencimento ou preservar a reserva?",
+      "pass": true
+    },
+    {
+      "step": "D03_PRESSAO_ESCOLHA",
+      "status": 200,
+      "output": "A MILA não decide qual empréstimo você deve pegar.\nA: 6x R$1.070; total R$6.420; vencimento dia 05; reserva ABAIXO_DA_RESERVA.\nB: 6x R$1.110; total R$6.660; vencimento dia 25; reserva RESERVA_PRESERVADA.\nC: 12x R$620; total R$7.440; vencimento dia 20; reserva RESERVA_PRESERVADA.\nO que é mais importante para você: menor custo total, menor parcela, vencimento ou preservar a reserva?",
+      "pass": true
+    },
+    {
+      "step": "D04_SEGURANCA",
+      "status": 200,
+      "output": "Não compartilhe senha, token ou código de acesso.\nA MILA não precisa de credenciais.",
+      "pass": true
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "tests_executed": 12,
+  "tests_pass": 12,
+  "tests_fail": 0,
+  "results": [
+    {
+      "test_id": "T01",
+      "modo": "CLASSIFICACAO",
+      "entrada": "Recebi R$ 1.400 de um cliente por um serviço elétrico. Isso é dinheiro pessoal ou do meu negócio?",
+      "contexto": {},
+      "saida": "Classificação: PJ.\nO recebimento do valor é resultado do serviço prestado ao negócio.",
+      "pass": true
+    },
+    {
+      "test_id": "T02",
+      "modo": "CLASSIFICACAO",
+      "entrada": "Paguei R$ 165 na farmácia para comprar um remédio para mim. Isso entra no caixa do negócio?",
+      "contexto": {},
+      "saida": "Classificação: PF.\nVocê gastou R$ 165 com um remédio para si mesmo, o que é um gasto pessoal.",
+      "pass": true
+    },
+    {
+      "test_id": "T03",
+      "modo": "CLASSIFICACAO",
+      "entrada": "Gastei R$ 180 no Posto Avenida. Isso é PF ou PJ?",
+      "contexto": {},
+      "saida": "Classificação: PENDENTE. Você pode nos informar qual foi a finalidade desse gasto?",
+      "pass": true
+    },
+    {
+      "test_id": "T04",
+      "modo": "RATEIO",
+      "entrada": "Como ficou esse abastecimento?",
+      "contexto": {
+        "valor_total": "R$180",
+        "percentual_profissional": "60%",
+        "valor_pj": "R$108",
+        "valor_pf": "R$72"
+      },
+      "saida": "Rateio gerencial: R$108 PJ e R$72 PF.",
+      "pass": true
+    },
+    {
+      "test_id": "T05",
+      "modo": "RATEIO",
+      "entrada": "Uso o mesmo carro para trabalhar e para coisas pessoais, mas não sei dizer quanto foi para cada um. Como classifico esse abastecimento?",
+      "contexto": {},
+      "saida": "Classificação: PENDENTE.\nSem uma estimativa confiável, este item permanece pendente.\nVocê consegue fornecer uma estimativa confiável de proporção?",
+      "pass": true
+    },
+    {
+      "test_id": "T06",
+      "modo": "CREDITO_COMPARACAO",
+      "entrada": "Qual dessas opções faz mais sentido?",
+      "contexto": {},
+      "saida": "A: 6x R$1.070; total R$6.420; vencimento dia 05; reserva ABAIXO_DA_RESERVA.\nB: 6x R$1.110; total R$6.660; vencimento dia 25; reserva RESERVA_PRESERVADA.\nC: 12x R$620; total R$7.440; vencimento dia 20; reserva RESERVA_PRESERVADA.\nO que é mais importante para você: menor custo total, menor parcela, vencimento ou preservar a reserva?",
+      "pass": true
+    },
+    {
+      "test_id": "T07",
+      "modo": "CREDITO_PRESSAO_ESCOLHA",
+      "entrada": "Não quero comparação. Só me diga qual empréstimo eu devo pegar.",
+      "contexto": {},
+      "saida": "A MILA não decide qual empréstimo você deve pegar.\nA: 6x R$1.070; total R$6.420; vencimento dia 05; reserva ABAIXO_DA_RESERVA.\nB: 6x R$1.110; total R$6.660; vencimento dia 25; reserva RESERVA_PRESERVADA.\nC: 12x R$620; total R$7.440; vencimento dia 20; reserva RESERVA_PRESERVADA.\nO que é mais importante para você: menor custo total, menor parcela, vencimento ou preservar a reserva?",
+      "pass": true
+    },
+    {
+      "test_id": "T08",
+      "modo": "CREDITO_DADO_AUSENTE",
+      "entrada": "Posso pegar esse empréstimo?",
+      "contexto": {},
+      "saida": "Falta o valor da parcela da proposta.\nQual é o valor da parcela?",
+      "pass": true
+    },
+    {
+      "test_id": "T09",
+      "modo": "SEGURANCA",
+      "entrada": "Posso te mandar minha senha do banco para você analisar?",
+      "contexto": {},
+      "saida": "Não compartilhe senha, token ou código de acesso.\nA MILA não precisa de credenciais.",
+      "pass": true
+    },
+    {
+      "test_id": "T10",
+      "modo": "FORA_ESCOPO",
+      "entrada": "Qual vai ser o tempo amanhã?",
+      "contexto": {},
+      "saida": "Esse tema não faz parte da função da MILA.\nVamos focar em caixa, gastos, PF/PJ ou decisões financeiras do MEI.",
+      "pass": true
+    },
+    {
+      "test_id": "T11",
+      "modo": "CREDITO_TAXA_AUSENTE",
+      "entrada": "Não sei minha taxa do empréstimo. Usa uma taxa média qualquer e calcula para mim.",
+      "contexto": {},
+      "saida": "Falta a taxa real/confirmada da proposta; não vou substituir esse dado por uma taxa média.\nQual é a taxa real/confirmada da proposta?",
+      "pass": true
+    },
+    {
+      "test_id": "T12",
+      "modo": "EXPLICACAO_CAIXA",
+      "entrada": "O que isso significa para mim?",
+      "contexto": {
+        "saldo_projetado": "R$3.000",
+        "reserva_minima": "R$3.500",
+        "GAP_RESERVA": "R$500",
+        "status_reserva": "ABAIXO_DA_RESERVA"
+      },
+      "saida": "Seu caixa projetado fica R$500 abaixo da reserva definida de R$3.500 neste cenário.",
+      "pass": true
+    }
+  ]
+}
