@@ -149,3 +149,18 @@ Os quatro arquivos foram materializados, lidos de volta e promovidos para `main`
 - backfill documental de completude: **registrado em 23/09/2026**.
 
 `GATE_2=CONCLUIDO_COM_EVIDENCIA_E_BACKFILL_DOCUMENTAL`
+
+
+## Complemento posterior — uso misto
+
+Decisão autoral aprovada durante o Gate 3:
+
+- não criar classe `MISTO` no MVP;
+- uso claramente profissional → `PJ`;
+- uso claramente pessoal → `PF`;
+- uso misto com proporção declarada pelo usuário → rateio determinístico entre PF e PJ;
+- sem estimativa confiável → `PENDENTE`;
+- o sistema não inventa percentual;
+- o rateio é gerencial no protótipo e não representa regra tributária ou fiscal.
+
+Este complemento **não altera a conclusão do Gate 2**; ele refina o comportamento de tratamento dos casos ambíguos durante o Gate 3.
