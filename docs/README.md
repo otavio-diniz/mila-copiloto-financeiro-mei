@@ -20,4 +20,4 @@ Documentação do desafio por gate.
 - Gate 5: PASS — 60 testes unitários + matriz live 12/12.
 - Gate 6: PASS — roteiro até 3 minutos + demo 4/4.
 
-Submissão externa, Git write e certificação continuam não executados. A fonte institucional deve ser revalidada imediatamente antes de eventual entrega externa.
+Código, documentação e evidências estão versionados no GitHub. A fonte institucional deve ser revalidada imediatamente antes de eventual entrega externa.

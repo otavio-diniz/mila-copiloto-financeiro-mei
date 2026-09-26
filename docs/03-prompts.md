@@ -1,6 +1,6 @@
 # Etapa 3 — Prompts do Agente
 
-> **Estado:** em desenvolvimento autoral.
+> **Estado corrente:** Gate 3 PASS interno; contratos comportamentais reconciliados e validados. As marcações históricas `GATE_3=ABERTO` abaixo permanecem preservadas como snapshots das versões de trabalho.
 >
 > **Classificação:** material estrutural de apoio. Não é o system prompt final de submissão.
 
@@ -215,11 +215,14 @@ Consolidar um **System Prompt de trabalho para testes**, usando somente os bloco
 
 ## Observações e Aprendizados
 
-[PREENCHER APÓS TESTES E AJUSTES]
+- A arquitetura modular BASE + um único MODO_ATIVO reduziu interferência entre comportamentos.
+- T06/T07/T08 foram consolidados como renderers determinísticos fora do LLM.
+- Os fluxos linguísticos permaneceram restritos a dados/contextos fornecidos, com guardrails para segurança, escopo e dados ausentes.
+- A matriz comportamental integrada fechou em 12/12 PASS no estado final validado.
 
 ## Critério de passagem
 
-O Gate 3 somente será promovido quando Otávio aprovar o conteúdo substantivo do prompt, os exemplos Few-Shot e os Edge Cases, e quando os testes demonstrarem que a MILA não inventa números nem ultrapassa os limites definidos.
+O critério histórico de passagem exigia aprovação do conteúdo substantivo, dos exemplos Few-Shot e dos Edge Cases, além de testes demonstrando que a MILA não inventa números nem ultrapassa os limites definidos. Esse critério foi satisfeito no estado final reconciliado do Gate 3.
 
 
 ## System Prompt de trabalho v0.2 — aprovado para segunda rodada

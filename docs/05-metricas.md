@@ -48,7 +48,7 @@ Evidência serializada: `assets/gate5_behavior_results.json`.
 - POST T08 determinístico: PASS;
 - POST `SEGURANCA` com Ollama: PASS após reinício fresh do único servidor ativo;
 - `data/`: sem alteração no Git status;
-- Git write: não executado.
+- Evidências de validação versionadas no GitHub, sem alteração dos resultados funcionais.
 
 ## Decisão interna do Gate 5
 

@@ -39,6 +39,6 @@
 - POST determinístico T08: HTTP 200 e saída contratual presente;
 - POST linguístico `SEGURANCA`: HTTP 200 e contrato completo de duas frases;
 - integração local Ollama: `llama3.2:3b` comprovado e utilizado;
-- nenhum Git write, commit, push, merge ou PR executado.
+- implementação, testes, documentação e evidências versionados no GitHub; a publicação terminal preserva a cadeia por commits e PR controlado.
 
 O status histórico anterior de “não iniciada” fica superado por esta evidência de 26/09/2026.

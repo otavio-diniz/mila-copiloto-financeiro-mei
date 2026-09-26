@@ -2,7 +2,7 @@
 
 > **Seu Copiloto Financeiro para MEI**
 
-Projeto em desenvolvimento no **Bootcamp Bradesco — GenAI, Dados & Cyber**, Módulo 07, Desafio 7.2.
+Projeto desenvolvido no **Bootcamp Bradesco — GenAI, Dados & Cyber**, Módulo 07, Desafio 7.2.
 
 ## Estado do projeto
 
@@ -12,8 +12,8 @@ Projeto em desenvolvimento no **Bootcamp Bradesco — GenAI, Dados & Cyber**, M�
 - **Gate 4 — Aplicação funcional:** PASS interno; protótipo localhost executável conectado à base sintética.
 - **Gate 5 — Avaliação e métricas:** PASS interno; 60 testes unitários + matriz live 12/12.
 - **Gate 6 — Pitch/demo:** PASS interno; roteiro de até 3 minutos + demo reproduzível 4/4.
-- **Git regularização/publicação:** pendente de gate específico; working tree não versionado nesta execução.
-- **Submissão DIO:** não realizada.
+- **Git/GitHub:** código, documentação e evidências versionados; publicação terminal rastreada por commits e PR.
+- **Submissão DIO:** pendente exclusivamente de Otávio.
 
 ## Onde cada parte é construída
 
@@ -76,7 +76,7 @@ Implementação vigente: **Python 3.12 + biblioteca padrão + HTML/CSS server-re
 
 ## Integridade e autoridade vigente
 
-Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático formativo sem nota** e autorizou assistência técnica direta para conclusão interna da MILA. A autorização cobre implementação, correção e testes no working tree, mas **não** cobre Git write, publicação, submissão DIO ou comunicação externa. O histórico anterior permanece preservado nas fontes acadêmicas.
+Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático formativo sem nota** e autorizou assistência técnica direta para conclusão interna da MILA e conclusão controlada do processo no GitHub. A submissão à DIO permanece exclusiva de Otávio. O histórico anterior permanece preservado nas fontes acadêmicas.
 
 ## Referências de origem
 
