@@ -122,3 +122,11 @@ Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático for
 ---
 **MILA** — MEI Inteligente para Liquidez e Autonomia.  
 © 2026 Otávio Diniz. Todos os direitos reservados.
+
+## Orientação acadêmica e convite a feedback
+
+A MILA foi desenvolvida no **Bootcamp Bradesco — GenAI, Dados & Cyber**, no desafio **7.2 — Construa seu Assistente Virtual com Inteligência Artificial**. A referência didática do projeto final é **Venilton FalvoJr (`@falvojr`)**, e os materiais oficiais de origem pertencem ao ecossistema educacional da **`@digitalinnovationone`**.
+
+Agradeço pela orientação e pela proposta do desafio. Se o instrutor, a DIO ou profissionais ligados ao programa encontrarem este repositório, **feedback técnico e de produto é bem-vindo**, especialmente sobre clareza da arquitetura, segurança dos guardrails, experiência do MEI e evolução do protótipo.
+
+A menção ao instrutor, à DIO e ao **Bradesco** registra a origem acadêmica e o agradecimento pelo programa; **não implica endosso, avaliação, vínculo profissional ou aprovação** dessas partes sobre a implementação autoral.
