@@ -1,6 +1,7 @@
 # Etapa 6 — Pitch
 
 > **Estado interno:** roteiro e demo técnica preparados em 26/09/2026. Entrega externa não realizada.
+> **Gravação audiovisual:** PENDENTE — o vídeo/pitch de aproximadamente 3 minutos ainda precisa ser gravado por Otávio antes da submissão.
 
 ## Regra operacional
 
@@ -62,3 +63,7 @@ Evidência serializada: `assets/gate6_demo_results.json`.
 `GATE_6=PASS` para preparação interna: roteiro de até 3 minutos materializado e demonstração curta reproduzível validada.
 
 Antes de entrega externa, revalidar o requisito institucional vigente. Nenhuma submissão, publicação, login ou comunicação externa foi executada por este Gate.
+
+`PITCH_VIDEO_RECORDED=NO`
+
+`NEXT_HUMAN_ACTION=GRAVAR_PITCH_E_REVALIDAR_CAMPOS_DA_DIO_ANTES_DA_SUBMISSAO`

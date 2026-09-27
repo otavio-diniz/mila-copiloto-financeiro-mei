@@ -12,6 +12,7 @@ Projeto desenvolvido no **Bootcamp Bradesco — GenAI, Dados & Cyber**, Módulo 
 - **Gate 4 — Aplicação funcional:** PASS interno; protótipo localhost executável conectado à base sintética.
 - **Gate 5 — Avaliação e métricas:** PASS interno; 60 testes unitários + matriz live 12/12.
 - **Gate 6 — Pitch/demo:** PASS interno; roteiro de até 3 minutos + demo reproduzível 4/4.
+- **Pitch audiovisual:** PENDENTE de gravação por Otávio; o PASS interno do Gate 6 comprova roteiro/demo, não vídeo gravado.
 - **Git/GitHub:** código, documentação e evidências versionados; publicação terminal rastreada por commits e PR.
 - **Submissão DIO:** pendente exclusivamente de Otávio.
 
@@ -62,6 +63,28 @@ Resposta simples ao usuário
 ```
 
 Implementação vigente: **Python 3.12 + biblioteca padrão + HTML/CSS server-rendered + `urllib.request` + Ollama local `llama3.2:3b`**, com execução em browser localhost.
+
+## Como executar localmente
+
+Pré-requisitos: Python 3.12, Ollama ativo e o modelo `llama3.2:3b` instalado. Se o modelo ainda não existir no ambiente, use `ollama pull llama3.2:3b`.
+
+Na raiz do repositório:
+
+```powershell
+python -m src.app
+```
+
+Depois, abra `http://127.0.0.1:8000/` no navegador. A interface atual é um protótipo de laboratório e expõe o seletor de modo para facilitar validação; esse detalhe não representa a experiência final de produto.
+
+## Como validar
+
+```powershell
+python -m unittest tests.test_core tests.test_renderers tests.test_router tests.test_prompts tests.test_llm_client tests.test_web tests.test_app -v
+python -m tests.gate5_live_harness
+python -m tests.gate6_demo_harness
+```
+
+Os resultados serializados ficam em `assets/gate5_behavior_results.json` e `assets/gate6_demo_results.json`.
 
 ## Princípios de segurança
 

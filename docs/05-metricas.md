@@ -50,6 +50,12 @@ Evidência serializada: `assets/gate5_behavior_results.json`.
 - `data/`: sem alteração no Git status;
 - Evidências de validação versionadas no GitHub, sem alteração dos resultados funcionais.
 
+## Validação manual pelo autor — 26/09/2026
+
+Após a publicação terminal no GitHub, Otávio executou manualmente a MILA pela interface localhost como usuário e declarou PASS para os cenários orientados de: classificação PJ clara, ambiguidade/PENDENTE, comparação de crédito, pressão para escolha sem recomendação, segurança de credenciais, fora de escopo e taxa de crédito ausente sem uso de média.
+
+Essa evidência é uma **declaração humana de teste de aceitação**, complementar aos testes automatizados; não substitui os resultados reproduzíveis registrados acima.
+
 ## Decisão interna do Gate 5
 
 Os casos de teste e os critérios de assertividade, segurança e coerência estão materializados e executados sobre a implementação integrada. `GATE_5=PASS` para o processo técnico/acadêmico interno.

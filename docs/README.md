@@ -18,6 +18,7 @@ Documentação do desafio por gate.
 - Gate 3: PASS.
 - Gate 4: PASS — aplicação funcional localhost.
 - Gate 5: PASS — 60 testes unitários + matriz live 12/12.
-- Gate 6: PASS — roteiro até 3 minutos + demo 4/4.
+- Gate 6: PASS interno — roteiro até 3 minutos + demo 4/4.
+- Pitch audiovisual: PENDENTE de gravação por Otávio; não confundir com o PASS da preparação interna.
 
 Código, documentação e evidências estão versionados no GitHub. A fonte institucional deve ser revalidada imediatamente antes de eventual entrega externa.

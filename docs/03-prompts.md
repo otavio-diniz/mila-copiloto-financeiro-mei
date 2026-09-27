@@ -26,6 +26,14 @@ A estrutura desta etapa segue o template oficial `docs/03-prompts.md` do reposit
 - Cálculos financeiros: determinísticos na aplicação; o LLM explica resultados.
 - Crédito: comparar impactos e trade-offs; não ordenar contratação nem prometer melhor oferta de mercado.
 
+## Estado efetivo implementado — V0.8
+
+A implementação canônica vigente está em `src/prompts.py` e materializa a configuração **V0.8** validada no Gate 3. Cada chamada linguística contém `BASE_PROMPT` + exatamente um `MODE_PROMPT` ativo + contexto calculado aplicável + mensagem do usuário.
+
+Modos linguísticos efetivos: `CLASSIFICACAO`, `RATEIO`, `CREDITO_TAXA_AUSENTE`, `SEGURANCA`, `FORA_ESCOPO` e `EXPLICACAO_CAIXA`. Os contratos T06/T07/T08 (`CREDITO_COMPARACAO`, `CREDITO_PRESSAO_ESCOLHA`, `CREDITO_DADO_AUSENTE`) são renderizados deterministicamente e **não chamam LLM**.
+
+Resultado final do Gate 3: **12 PASS | 0 AJUSTE | 0 FAIL | 0 FAIL_CRITICO**. As versões v0.1–v0.5 mantidas abaixo são snapshots históricos da evolução e não representam o estado executável atual.
+
 ## System Prompt
 
 ### System Prompt de trabalho v0.1 — consolidado para testes
