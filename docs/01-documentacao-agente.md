@@ -55,13 +55,13 @@ flowchart TD
 
 | Componente | Descrição |
 |---|---|
-| Interface | A definir no Gate 4; recebe perguntas e apresenta respostas |
+| Interface | Web local server-rendered em HTML/CSS, servida por `wsgiref.simple_server` em `127.0.0.1:8000` |
 | Camada de regras e cálculos | Executa classificações confirmadas, saldo, projeções, parcelas e rateios determinísticos |
 | Base de Conhecimento | `perfil_mei.json`, `transacoes.csv`, `compromissos.csv` e `propostas_credito.csv` |
-| LLM | Modelo a definir no Gate 4; explica o contexto calculado em linguagem simples |
+| LLM | Ollama local com `llama3.2:3b`, restrito aos fluxos linguísticos autorizados |
 | Validação | Impede invenção de números, mantém ambiguidades como `PENDENTE` e aplica limites de escopo |
 
-A **stack técnica permanece pendente** e será definida no Gate 4. O diagrama descreve responsabilidades, não uma tecnologia específica.
+No momento do Gate 1, a stack técnica ainda estava pendente. O estado efetivo materializado no Gate 4 é **Python 3.12 + biblioteca padrão + HTML/CSS server-rendered + `urllib.request` + Ollama local `llama3.2:3b`**. T06/T07/T08 permanecem fora do LLM e usam renderers determinísticos.
 
 ## Segurança e Anti-Alucinação
 

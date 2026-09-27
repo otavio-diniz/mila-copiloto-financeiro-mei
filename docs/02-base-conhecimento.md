@@ -42,9 +42,9 @@ A classificação não deve ser forçada quando a descrição não for suficient
 
 ### Como os dados são carregados?
 
-A aplicação deverá carregar os quatro arquivos JSON/CSV da pasta `data/`. A tecnologia de implementação será decidida no Gate 4.
+A aplicação carrega os quatro arquivos JSON/CSV da pasta `data/` por meio de `src/core.py`. A implementação efetiva usa Python 3.12 e biblioteca padrão.
 
-A camada de regras e cálculos usa esses arquivos para montar saldo, projeções, compromissos, parcelas e demais resultados numéricos. Esses cálculos são **determinísticos** e ficam fora do LLM.
+A camada de regras e cálculos usa esses arquivos para montar saldo, projeções, compromissos, parcelas e demais resultados numéricos. Esses cálculos são **determinísticos** e ficam fora do LLM; a integração linguística usa Ollama local `llama3.2:3b` somente após o roteamento.
 
 ### Como os dados são usados no prompt?
 
