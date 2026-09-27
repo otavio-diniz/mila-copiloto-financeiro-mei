@@ -4,6 +4,8 @@
 
 Projeto desenvolvido no **Bootcamp Bradesco — GenAI, Dados & Cyber**, Módulo 07, Desafio 7.2.
 
+> **Autoria e direitos:** © 2026 Otávio Diniz. Todos os direitos reservados. Este repositório é público para avaliação acadêmica, demonstração e portfólio. A publicação pública **não constitui licença open source** e não autoriza exploração comercial, redistribuição ou criação/distribuição de produtos derivados sem autorização prévia e escrita. Consulte `LICENSE` e `NOTICE.md`.
+
 ## Estado do projeto
 
 - **Gate 1 — Documentação do agente:** PASS.
@@ -97,6 +99,17 @@ Os resultados serializados ficam em `assets/gate5_behavior_results.json` e `asse
 - o protótipo não substitui orientação contábil, jurídica ou financeira profissional/regulada;
 - senha, token e credenciais bancárias não são solicitados.
 
+## Autoria, licença e uso público
+
+A MILA é um projeto autoral de **Otávio Diniz**. O repositório permanece público para permitir avaliação acadêmica, inspeção técnica, demonstração e portfólio, mas **não adota licença open source**.
+
+A licença proprietária permite que avaliadores, instrutores, recrutadores e revisores inspecionem e executem o protótipo na medida necessária para avaliação ou reprodução da demo. Fora dessa finalidade limitada, uso comercial, redistribuição, sublicenciamento, incorporação em outro produto/serviço e distribuição de trabalhos derivados exigem autorização prévia e escrita do autor.
+
+- Termos completos: `LICENSE`
+- Aviso de autoria, proveniência e terceiros: `NOTICE.md`
+
+A disponibilidade pública no GitHub continua sujeita também às funcionalidades e aos Termos de Serviço do próprio GitHub, inclusive visualização e fork dentro da plataforma.
+
 ## Integridade e autoridade vigente
 
 Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático formativo sem nota** e autorizou assistência técnica direta para conclusão interna da MILA e conclusão controlada do processo no GitHub. A submissão à DIO permanece exclusiva de Otávio. O histórico anterior permanece preservado nas fontes acadêmicas.
@@ -107,4 +120,5 @@ Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático for
 - Exemplo do instrutor: referência didática/comparativa, sem cópia como solução do projeto.
 
 ---
-**MILA** — MEI Inteligente para Liquidez e Autonomia.
+**MILA** — MEI Inteligente para Liquidez e Autonomia.  
+© 2026 Otávio Diniz. Todos os direitos reservados.
