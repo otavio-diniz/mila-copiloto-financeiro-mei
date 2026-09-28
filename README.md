@@ -133,10 +133,6 @@ A licença proprietária permite que avaliadores, instrutores, recrutadores e re
 
 A disponibilidade pública no GitHub continua sujeita também às funcionalidades e aos Termos de Serviço do próprio GitHub, inclusive visualização e fork dentro da plataforma.
 
-## Integridade e autoridade vigente
-
-Em 26/09/2026, Otávio reclassificou esta execução como **projeto prático formativo sem nota** e autorizou assistência técnica direta para conclusão interna da MILA e conclusão controlada do processo no GitHub. A submissão à DIO permanece exclusiva de Otávio. O histórico anterior permanece preservado nas fontes acadêmicas.
-
 ## Referências de origem
 
 - Repositório oficial do desafio: `digitalinnovationone/dio-lab-bia-do-futuro`
