@@ -46,6 +46,29 @@ A MILA implementa:
 5. comparar cenários de crédito considerando custo, prazo, parcela, vencimento e compatibilidade com o fluxo de caixa;
 6. explicar resultados em linguagem simples.
 
+## Enquadramento de produto, valor e adoção
+
+A MILA também pode ser lida como um **case de IA aplicada a um problema de negócio**, e não apenas como implementação técnica. O raciocínio de produto adotado é:
+
+**problema de negócio → aplicabilidade da IA → dados/contexto necessários → limitações e riscos → controles → decisão humana → valor a validar**.
+
+A hipótese de valor do protótipo é reduzir o esforço necessário para organizar informações financeiras dispersas, tornar cenários mais comparáveis e apoiar uma decisão mais consciente sem transferir a decisão final para o agente.
+
+A decisão permanece **Human-in-the-Loop**: a MILA pode calcular, organizar, comparar e explicar, mas não movimenta recursos nem contrata crédito em nome do usuário.
+
+Para uma futura validação com usuários, as principais métricas candidatas são:
+
+- tempo necessário para chegar a uma visão de caixa interpretável;
+- quantidade de interações/retrabalho até concluir uma análise;
+- frequência de pedidos de esclarecimento por dados ausentes ou ambíguos;
+- consistência dos cálculos e cenários determinísticos;
+- clareza percebida das explicações e comparações;
+- proporção de casos que exigem escalonamento ou revisão humana adicional;
+- recorrência de uso e adoção do fluxo pelo usuário;
+- custo operacional/computacional por análise, quando houver ambiente real de medição.
+
+> **Importante:** essas métricas são um **plano de validação e hipóteses de valor/adoção**, não resultados já comprovados. O protótipo atual usa base sintética e não possui evidência de adoção por usuários reais.
+
 ## Arquitetura conceitual
 
 ```text
@@ -97,7 +120,7 @@ Os resultados serializados ficam em `assets/gate5_behavior_results.json` e `asse
 - o agente não movimenta dinheiro nem contrata crédito;
 - não há promessa de melhor oferta do mercado;
 - o protótipo não substitui orientação contábil, jurídica ou financeira profissional/regulada;
-- senha, token e credenciais bancárias não são solicitados.
+- dados de autenticação bancária não são solicitados pelo protótipo.
 
 ## Autoria, licença e uso público
 
