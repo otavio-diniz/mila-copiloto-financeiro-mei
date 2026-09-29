@@ -14,9 +14,7 @@ Projeto desenvolvido no **Bootcamp Bradesco — GenAI, Dados & Cyber**, Módulo 
 - **Gate 4 — Aplicação funcional:** PASS interno; protótipo localhost executável conectado à base sintética.
 - **Gate 5 — Avaliação e métricas:** PASS interno; 60 testes unitários + matriz live 12/12.
 - **Gate 6 — Pitch/demo:** PASS interno; roteiro de até 3 minutos + demo reproduzível 4/4.
-- **Pitch audiovisual:** PENDENTE de gravação por Otávio; o PASS interno do Gate 6 comprova roteiro/demo, não vídeo gravado.
 - **Git/GitHub:** código, documentação e evidências versionados; publicação terminal rastreada por commits e PR.
-- **Submissão DIO:** pendente exclusivamente de Otávio.
 
 ## Onde cada parte é construída
 
